@@ -1,0 +1,432 @@
+<html>
+<head>
+<style>
+body {font-family: Arial;}
+button {margin-bottom: 5%;}
+h2 {text-align: center;}	
+#container {margin: auto; width: 100%;}
+.shell {border: 1px solid black; width: 25%; text-align: center; margin: auto; margin-bottom: 1%;}
+.reveal {font-weight: 500;}
+.platform {font-weight: bold; font-size: 125%;}
+.half {width: 45%; float: left; margin: 1% 2%;}
+.row {clear: both;}
+#row02 {width: 100%; margin-left: auto; margin-right: auto;}
+.bottom {clear: both;}
+.ctr {text-align: center;}
+</style>
+<title>Game Picker</title>
+</head>
+
+
+<body>
+
+<h2>You should play the following game for the corresponding system next:</h2>
+
+<div id="container">
+
+<!-- This is the "Overall" section. It lists ALL games for EVERY system. -->
+	<div id="row01" class="row">
+		<div id="overallshell" class="shell full">
+			<p class="platform">Overall:</p>
+			<p id="overall" class="reveal">?</p>
+			<button onclick="overallFunction()">Click to reveal suggestion</button>
+			<script>
+			function overallFunction() {
+			var myOverallGames = [
+'Alice: Madness Returns', 
+'Beyond Good & Evil HD', 
+'Borderlands', 
+'ENSLAVED: Odyssey to the West Premium Edition', 
+'Far Cry 3', 
+'Faery: Legends of Avalon', 
+'Flashback', 
+'Kingdoms of Amalur: Reckoning',
+'Mortal Kombat Arcade Collection', 
+'Puppeteer', 
+'rain', 
+'Remember Me', 
+'Sherlock Holmes: Crimes and Punishments', 
+'Suikoden', 
+'Syberia Collection', 
+'Tales of Xillia',  'The Cave', 
+'Xenogears', 
+'Wild Arms', 
+'ADR1FT', 
+'Assassin\'s Creed Chronicles', 
+'Batman: Arkham Knight', 
+'Beyond: Two Souls', 
+'Blackwood Crossing', 
+'Bloodborne', 
+'Broken Age', 
+'Child of Light', 
+'CounterSpy', 
+'Darksiders', 
+'Dex', 
+'Dishonored 2', 
+'Earthlock: Festival of Magic', 
+'Everybody\'s Gone to the Rapture', 
+'Grim Fandango Remastered', 
+'Guacamelee', 
+'Indigo Prophecy', 
+'inFAMOUS First Light', 
+'King\'s Quest', 
+'Knack', 
+'L.A. Noire (when on sale)', 
+'Lego Harry Potter', 
+'Lego Jurassic World', 
+'Lego Movie', 
+'LIMBO', 
+'Metro Redux', 
+'Oddworld New n Tasty', 
+'Outland', 
+'Oxenfree', 
+'Prototype', 
+'Psychonauts', 
+'RiME', 
+'Rise of the Tomb Raider', 
+'Rogue Galaxy', 
+'Seasons After Fall', 
+'Shadow Complex Remastered', 
+'Shadwen', 
+'Sleeping Dogs: Definitive Edition', 
+'SOMA', 
+'Song of the Deep', 
+'Sonic Mania (when on sale)', 
+'Stories: The Path of Destinies', 
+'Strider', 
+'Styx: Master of Shadows', 
+'Submerged', 
+'The Book of Unwritten Tales 2', 
+'The Solus Project', 
+'The Swapper', 
+'The Talos Principle', 
+'Thief', 
+'This War of Mine: The Little Ones', 
+'Transistor', 
+'Unravel', 
+'Valley', 
+'Watch Dogs', 
+'Mervils: A VR Adventure', 
+'Statik', 
+'The Assembly', 
+'Robinson: The Journey', 
+'Doom VFR', 
+'Skyrim VR', 
+'Crystal Rift', 
+'Unearthing Mars', 
+'Citizens of Earth', 
+'Claire', 
+'Fairune', 
+'Saturday Morning RPG', 
+'Tearaway', 
+'The Legend of Heroes: Trails in the Sky', 
+'The Unfinished Swan', 
+'Torment: Tides of Numenera', 
+'Learn Japanese To Survive! Hiragana Battle', 
+'The Cave', 
+'The Elder Scrolls III: Morrowind GOTY', 
+'Evoland 2', 
+'Unepic', 
+'Fallout 3', 
+'The Witcher 3', 
+'Stories Untold', 
+'Pillars of Eternity', 
+'Anodyne', 
+'Dragon Age Inquisition: GOTY', 
+'A Bird Story', 
+'A Story About My Uncle', 
+'Aquaria', 
+'Waking Mars', 
+'System Shock', 
+'Terra Incognita ~ Chapter One: The Descendant', 
+'To The Moon', 
+'Millennium - Deluxe Edition', 
+'Always Sometimes Monsters', 
+'Celestian Tales: Old North', 
+'Her Story', 
+'The Longest Journey', 
+'Skyborn', 
+'Clockwork', 
+'Ori and the Blind Forest', 
+'ReCore', 
+'Halo MCC', 
+'Star Fox Zero',
+'Metroid Prime',
+'The Secret of Mana',
+			];
+
+			var lastItem = myOverallGames.Length - 1;
+			var overallGame = myOverallGames[Math.floor(Math.random() * myOverallGames.length)];
+			document.getElementById("overall").innerHTML = overallGame;
+			}
+			</script>
+		</div>
+	</div>
+
+
+<!-- This is the PC list. Add games to play on PC in this section -->
+	<div id="row02" class="row">
+		<div id="pcshell" class="shell half">
+			<p class="platform">PC:</p>
+			<p id="pc" class="reveal">?</p>
+			<button onclick="pcFunction()">Click to reveal suggestion</button>
+			<script>
+			function pcFunction() {
+			var mypcGames = [
+'Torment: Tides of Numenera', 
+'Learn Japanese To Survive! Hiragana Battle', 
+'The Cave', 
+'The Elder Scrolls III: Morrowind GOTY', 
+'Evoland 2', 
+'Unepic', 
+'Fallout 3', 
+'The Witcher 3', 
+'Stories Untold', 
+'Pillars of Eternity', 
+'Anodyne', 
+'Dragon Age Inquisition: GOTY', 
+'A Bird Story', 
+'A Story About My Uncle', 
+'Aquaria', 
+'Waking Mars', 
+'System Shock', 
+'Terra Incognita ~ Chapter One: The Descendant', 
+'To The Moon', 
+'Millennium - Deluxe Edition', 
+'Always Sometimes Monsters', 
+'Celestian Tales: Old North', 
+'Her Story', 
+'The Longest Journey', 
+'Skyborn', 
+'Clockwork'
+			];
+
+			var lastItem = mypcGames.Length - 1;
+			var pcGame = mypcGames[Math.floor(Math.random() * mypcGames.length)];
+			document.getElementById("pc").innerHTML = pcGame;
+			}
+			</script>
+		</div>
+
+
+<!-- This is the Xbox list. Add games to play on Xbox in this section -->
+		<div id="xboxshell" class="shell half">
+			<p class="platform">Xbox One:</p>
+			<p id="xbox" class="reveal">?</p>
+			<button onclick="xboxFunction()">Click to reveal suggestion</button>
+			<script>
+			function xboxFunction() {
+			var myXBOXGames = [
+'Ori and the Blind Forest', 
+'ReCore', 
+'Halo MCC', 
+
+			];
+
+			var lastItem = myXBOXGames.Length - 1;
+			var xboxGame = myXBOXGames[Math.floor(Math.random() * myXBOXGames.length)];
+			document.getElementById("xbox").innerHTML = xboxGame;
+			}
+			</script>
+		</div>
+
+
+<!-- This is the PS3 list. Add games to play on PS3 in this section -->
+	<div id="row03" class="row">
+		<div id="ps3shell" class="shell half">
+			<p class="platform">PlayStation 3:</p>
+			<p id="ps3" class="reveal">?</p>
+			<button onclick="ps3Function()">Click to reveal suggestion</button>
+			<script>
+			function ps3Function() {
+			var myPS3Games = [
+'Alice: Madness Returns', 
+'Beyond Good & Evil HD', 
+'Borderlands', 
+'ENSLAVED: Odyssey to the West Premium Edition', 
+'Far Cry 3', 
+'Faery: Legends of Avalon', 
+'Flashback', 
+'Kingdoms of Amalur: Reckoning',
+'Mortal Kombat Arcade Collection', 
+'Outland',
+'Puppeteer', 
+'rain', 
+'Remember Me', 
+'Sherlock Holmes: Crimes and Punishments', 
+'Suikoden', 
+'Syberia Collection', 
+'Tales of Xillia', 
+'The Cave', 
+'Xenogears', 
+'Wild Arms'
+			];
+
+			var lastItem = myPS3Games.Length - 1;
+			var ps3Game = myPS3Games[Math.floor(Math.random() * myPS3Games.length)];
+			document.getElementById("ps3").innerHTML = ps3Game;
+			}
+			</script>
+		</div>
+		
+
+<!-- This is the PS4 list. Add games to play on PS4 in this section -->
+		<div id="ps4shell" class="shell half">
+			<p class="platform">PlayStation 4:</p>
+			<p id="ps4" class="reveal">?</span></p>
+			<button onclick="ps4Function()">Click to reveal suggestion</button>
+
+			<script>
+			function ps4Function() {
+			var myPS4Games = [
+'ADR1FT', 
+'Assassin\'s Creed Chronicles', 
+'Batman: Arkham Knight', 
+'Beyond: Two Souls', 
+'Blackwood Crossing', 
+'Bloodborne', 
+'Broken Age', 
+'Child of Light', 
+'CounterSpy', 
+'Darksiders', 
+'Dex', 
+'Dishonored 2', 
+'Earthlock: Festival of Magic', 
+'Everybody\'s Gone to the Rapture', 
+'Grim Fandango Remastered', 
+'Indigo Prophecy', 
+'inFAMOUS First Light', 
+'King\'s Quest', 
+'Knack', 
+'L.A. Noire (when on sale)', 
+'Lego Harry Potter', 
+'Lego Jurassic World', 
+'Lego Movie', 
+'LIMBO', 
+'Metro Redux (PC?)', 
+'Oddworld New n Tasty', 
+'Oxenfree', 
+'Prototype', 
+'Psychonauts', 
+'RiME',
+'Rise of the Tomb Raider', 
+'Rogue Galaxy', 
+'Seasons After Fall', 
+'Shadow Complex Remastered', 
+'Shadwen', 
+'Sleeping Dogs: Definitive Edition', 
+'SOMA', 
+'Song of the Deep', 
+'Sonic Mania (when on sale)', 
+'Stories: The Path of Destinies', 
+'Strider', 
+'Styx: Master of Shadows', 
+'Submerged', 
+'The Book of Unwritten Tales 2', 
+'The Solus Project', 
+'The Swapper', 
+'The Talos Principle', 
+'Thief', 
+'This War of Mine: The Little Ones', 
+'Transistor', 
+'Unravel', 
+'Valley', 
+'Watch Dogs'
+			];
+
+			var lastItem = myPS4Games.Length - 1;
+			var ps4Game = myPS4Games[Math.floor(Math.random() * myPS4Games.length)];
+			document.getElementById("ps4").innerHTML = ps4Game;
+			}
+			</script>
+		</div>
+
+	</div>
+
+
+<!-- This is the PSVR list. Add games to play on PSVR in this section -->
+	<div id="row04" class="row">
+		<div id="psvrshell" class="shell half">
+			<p class="platform">PlayStation VR:</p>
+			<p id="psvr" class="reveal">?</p>
+			<button onclick="psvrFunction()">Click to reveal suggestion</button>
+			<script>
+			function psvrFunction() {
+			var myPSVRGames = [
+'Mervils: A VR Adventure', 
+'Statik', 
+'The Assembly', 
+'Robinson: The Journey', 
+'Doom VFR', 
+'Skyrim VR', 
+'Crystal Rift', 
+'Unearthing Mars'
+			];
+
+			var lastItem = myPSVRGames.Length - 1;
+			var psvrGame = myPSVRGames[Math.floor(Math.random() * myPSVRGames.length)];
+			document.getElementById("psvr").innerHTML = psvrGame;
+			}
+			</script>
+		</div>
+
+
+<!-- This is the PS Vita list. Add games to play on PS Vita in this section -->
+		<div id="psvshell" class="shell half">
+			<p class="platform">PlayStation Vita:</p>
+			<p id="psv" class="reveal">?</p>
+			<button onclick="psvFunction()">Click to reveal suggestion</button>
+			<script>
+			function psvFunction() {
+			var myPSVGames = [
+'Citizens of Earth', 
+'Claire', 
+'Fairune', 
+'Guacamelee', 
+'Saturday Morning RPG', 
+'Tearaway', 
+'The Legend of Heroes: Trails in the Sky', 
+'The Unfinished Swan'
+			];
+
+			var lastItem = myPSVGames.Length - 1;
+			var psvGame = myPSVGames[Math.floor(Math.random() * myPSVGames.length)];
+			document.getElementById("psv").innerHTML = psvGame;
+			}
+			</script>
+		</div>
+		
+
+<!-- Template for reuse in creating a new section --
+		<div id="psvshell" class="shell half">
+			<p class="platform">PlayStation Vita:</p>
+			<p id="psv" class="reveal">?</p>
+			<button onclick="psvFunction()">Click to reveal suggestion</button>
+			<script>
+			function psvFunction() {
+			var myPSVGames = [
+'Game Title 1', 
+'Game Title 2', 
+'Game Title 3', 
+'Game Title 4', 
+'Game Title 5', 
+			];
+
+			var lastItem = myPSVGames.Length - 1;
+			var psvGame = myPSVGames[Math.floor(Math.random() * myPSVGames.length)];
+			document.getElementById("psv").innerHTML = psvGame;
+			}
+			</script>
+		</div>
+END OF TEMPLATE -->
+		
+	</div>
+	<div class="bottom ctr">
+		<p>For Instructions on how to download and customize this Game Picker for your own gaming backlog, <a href="Game Picker Instructions.html">click here</a>.</p>
+		<p>Created by <a href="http://jasonhubsch.com" target="_blank">Jason L. Hubsch</a></p>
+	</div>
+</div>
+</body>
+
+
+</html>

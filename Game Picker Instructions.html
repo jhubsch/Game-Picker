@@ -1,0 +1,40 @@
+<html>
+<head>
+<style>
+body {font-family: Arial;}
+.adv {font-weight: bold; text-decoration: underline;}
+</style>
+<title>Game Picker - Customization Instructions</title>
+</head>
+
+<body>
+<p>In order to create your own version of this, please follow these steps:</p>
+<ol>
+<li>Download the Game Picker HTML file (<a href="Game Picker.html">right-click here</a>, choose Save As, and pick somewhere to save it on your computer).<br><br></li>
+<li>Open the downloaded file in a text editor. I recommend <a href="https://notepad-plus-plus.org" target="_blank">Notepad++</a><br><br></li>
+<li>Find a list of games you wish to modify. They are grouped by platform, as noted by comments. The first list is an "Overall" list that groups everything in one.<br><br></li>
+<li>Each game is given its own line for the sake of clarity. The title is surrounded by an apostrophe on each side, followed by a comma AFTERWARDS (example: 'Grand Theft Auto V',)<br><br></li>
+<li>Add your backlogged games you wish to play to the appropriate list (specific console) and/or to the Overall list. Erase the current content that is already there as well.<br>
+NOTE: Games with an apostrophe in them need a backslash before the apostrophe in the game title (example: 'Assassin\'s Creed Chronicles',)<br><br></li>
+<li>When ready, save the Game Picker page and open it in a web browser. You should now be able to click on the button for a specific game system (or the Overall button if added there, too) and have your next game to play suggested for you!<br><br></li>
+</ol>
+
+<p><a href="Game Picker.html">Return to Game Picker</a><br><br></p>
+
+<p class="adv">Advanced: Adding your own (new) system section(s)</p>
+<ol>
+<li>At the very bottom of the Game Picker.html file, you will see a commented out section which can be modified and subsequently used to create a new section, if you wish.<br><br></li>
+<li>I would recommend copying it, then pasting it above itself so you still have a copy of the original commented out template section for later. I recommend this for any subsquent new sections you additionally add as well.<br><br></li>
+<li>In the line that contains <pre><code>&lt;div id="psvshell" class="shell half"&gt;</code></pre> change 'psvshell' to '(somethingelse)shell' instead. For example, if making a SNES section, I'd change it to 'snesshell' which differentiates it from other systems' code blocks.<br>
+Where it says 'class="shell half"' you can change 'half' to 'full' if you want this system to stretch the width of the page (like the Overall section does). If it will go alongside another system you intend to add, then keep it as 'half'<br><br></li>
+<li>In the next line, you can change 'PlayStation Vita' to the appropriate system name (ie 'Super Nintendo')<br><br></li>
+<li>For the rest of the lines of this code block, using the template, you want to find both 'psv' and 'PSV' (since it's what is used in the template) and change it to your system abbreviation, keeping the same case. So, where you see 'id="psv"' you would change it to 'id="snes"' and where you see 'var myPSVGames' you would change it to 'var mySNESGames' as well. Replace lowercase iterations with lowercase and uppercase iterations with uppercase. This is part of the functionality used within the systems' code block for the Game Picker.<br><br></li>
+<li>One the above is complete, feel free to edit/change the listed games, following the above Instructions (games written as 'Game Title',). You should now have your own new system Game Picker!<br><br><br></li>
+</ol> 
+
+<p class="closing">If anyone is aware of how to set up any of the above in a GUI, please contact me.</p>
+
+
+</body>
+
+</html>
